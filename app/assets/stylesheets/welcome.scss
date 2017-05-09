@@ -1,0 +1,323 @@
+// Place all the styles related to the welcome controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+@import 'base';
+@import 'animate';
+
+/*字体颜色和背景颜色*/
+.lp-bg-gray {
+  background: #F4F3F3;
+  box-shadow: inset 0 1px 1px rgba(0,0,0,0.1), inset 0 -1px 1px rgba(0,0,0,0.1);
+}
+
+.lp {
+	color: #4C585F;
+	background: #fff;
+	font-family:  'Open Sans','open_sans','PingFang SC',"Microsoft YaHei","微软雅黑",STXihei,"华文细黑",sans-serif;
+	line-height: 1.5;
+	.container-fluid {
+		width: 1200px;
+	}
+	.title {
+		font-weight: normal;
+	}
+	.light {
+
+	}
+}
+.navbar {
+	position: absolute !important;
+	top: 0;
+	left: 0;
+	z-index: 10;
+	width: 100%;
+	color: #fff;
+	a {
+		color: #fff;
+	}
+	.navbar-nav > li > a {
+		margin: 0 20px;
+	}
+	.nav > li > a:hover, .nav > li > a:focus {
+		background: none;
+		color: #fff;
+		text-decoration: underline;
+	}
+	.nav > li > .brand:hover, .nav > li > .brand:focus {
+		text-decoration: none;
+	}
+	.navbar-toggle .icon-bar {
+		background: #fff;
+	}
+}
+
+@media screen and (min-width: 768px) {
+	.navbar {
+		.navbar-nav {
+			position: absolute;
+			top: 20px;
+			left: 50%;
+			margin-left: -341px;
+		}
+		.navbar-brand {
+			display: none;
+		}
+		.first-nav {
+			margin-left: 440px;
+		}
+		.third-nav {
+			margin-left: 200px;
+		}
+		.brand {
+			font-size: 30px;
+			font-family: 'roboto condensed',sans-serif;
+		}
+	}
+}
+
+@media screen and (min-width: 768px) {
+	.navbar-fixed {
+		position: fixed !important;
+		top: 0;
+		left: 0;
+		height: 60px;
+		background: #fff;
+		box-shadow: 0 1px 1px rgba(0,0,0,0.15);
+	  padding: 8px 0;
+	  z-index: 1000;
+	  a {
+	  	color: #555555;
+	  }
+	  .navbar-nav {
+			top: 4px;
+	  }
+	  .brand {
+	  	color: #D32048;
+	  }
+	  .nav > li > .brand:hover, .nav > li > .brand:focus, {
+	  	color: #D32048;	
+	  }
+	  .nav > li > a:hover, .nav > li > a:focus {
+			color: #555555;
+		}
+	}
+}
+	
+
+/*button*/
+.lp-b-btn {
+  color: #fff;
+  padding: 12px 40px;
+  background: #D32048;
+  color: #fff;
+  letter-spacing: 2px;
+  font-weight: bold;
+  transition: all .4s;
+  -webkit-transition: all .4s;
+  -moz-transition: all .4s;
+  -o-transition: all .4s;
+  -ms-transition: all .4s;
+  &:focus,
+	&:hover {
+	  color: #fff;
+	  background-color: #E04869;
+	  border-color: #E04869;
+	}
+}
+
+.lp-banner {
+	color: #fff;
+	height: 500px;
+  overflow: hidden;
+  .jumbotron {
+    padding-bottom: 110px;
+    margin: 0 -15px;
+    border-radius: 0;
+    padding-top: 0;
+  }
+}
+.jumbotron {
+  background-image: url(https://ww1.sinaimg.cn/large/006tNc79gy1fd7d1ric3qj31jk0rs14b.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  padding-bottom: 110px;
+  background-position: center -38px;
+  margin: 0 -15px 0;
+  color: #fff;;
+  position: relative;
+  height: 500px;
+  letter-spacing: 2px;
+  
+  &::before {
+    content: "";
+    width: 100%;
+    height: 100%;
+    background-color: transparentize(#000, .35);
+    position: absolute;
+    top: 0;
+    left: 0;
+  }
+  .text-content {
+    position: absolute;
+    z-index: 2;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+  }
+}
+
+.jumbotron-title {
+	color: #fff;
+  text-align: center;
+  padding: 125px 20px 0;
+  font-size: 40px !important;
+  text-align: center;
+  line-height: 1.5;
+}
+.jumbotron-slogan {
+	color: #fff;
+  margin: 44px auto 0;
+  font-size: 16px;
+  line-height: 26px;
+  text-align: center;
+}
+.jumbotron-lead {
+  margin-top: 40px;
+  margin-bottom: 230px;
+  text-align: center;
+  color: white;
+}
+
+.lp-advantage {
+	.lp-advantage-img {
+		width: 80px;
+		height: 80px;
+		border-radius: 50%;
+	}
+	.lp-advantage-title {
+		color: #444;
+		line-height: 1.2;
+	}
+	.lp-advantage-desc {
+		line-height: 1.7;
+	  letter-spacing: 0;
+	  font-size: 16px;
+	}
+		
+}
+
+/*home-people*/
+.lp-feedback {
+	.home-people {
+	  .person {
+	    display: inline-block;
+	    top: 0;
+	    padding-bottom: 20px;
+	    position: relative;
+	    .avata-wrapper {
+	      position: absolute;
+	      width: 96px;
+	      height: 96px;
+	      padding: 5px;
+	      left: 50%;
+	      top: 10px;
+	      margin-left: -53px;
+	      border: dotted 1px #E6EDEF;
+	      border-radius: 53px;
+	      overflow: hidden;
+	    }
+	    .avata {
+	      width: 100%;
+	      height: 100%;
+	      border-radius: 50%;
+	    }
+	    .intro {
+	      margin-top: 108px;
+	      .name {
+	        text-align: center;
+	      }
+	      .invest {
+	        float: right;
+	        margin-right: 20px;
+	        font-size: 14px;
+	        line-height: 28px;
+	        color: #fff;
+	        font-weight: bold;
+	      }
+	    }
+	    .words {
+	      position: relative;
+	      margin-top: 10px;
+	      padding: 41px 20px 20px 25px;
+	      border-radius: 3px;
+	      line-height: 25px;
+	      text-align: left;
+	      font-weight: bold;
+	      overflow: hidden;
+	      .bg {
+	        position: absolute;
+	        display: block;
+	        top: 0;
+	        left: 0;
+	        width: 100%;
+	        height: 100%;
+	        background: #fff;
+	        opacity: 0.7;
+	        z-index: 0;
+	      }
+	      .quote {
+	        position: absolute;
+	        color: #aaa;
+	        font-size: 16px;
+	      }
+	      .quote-l {
+	        top: 10px;
+	        left: 5px;
+	      }
+	      .quote-r {
+	        bottom: 10px;
+	        right: 5px;
+	      }
+	      .content {
+	        position: relative;
+	        height: 75px;
+	        overflow: hidden;
+	        font-size: 14px;
+	        z-index: 0;
+	      }
+	    }
+	  }
+	}
+}
+
+.lp-action {
+	background: url('https://ww2.sinaimg.cn/large/006tNbRwgy1fd6gpqtd6tj31hc0dq0xk.jpg') center center no-repeat;
+	height: 200px;
+	.text-content {
+		top: 0;
+		left: 0;
+		width: 100%;
+		z-index: 10;
+	}
+	p {
+		color: #fff;
+	}
+	&::before {
+    content: "";
+    width: 100%;
+    height: 100%;
+    background-color: transparentize(#000, .45);
+    position: absolute;
+    top: 0;
+    left: 0;
+  }
+}
+
+// 适应小屏幕
+@media (max-width: 1200px) {
+	.lp-banner {
+		height: 460px;
+	}
+}

@@ -1,0 +1,63 @@
+<div class="header_placeholder h80"></div>    
+<div class="header">
+  <div class="w1200 clearfix bc mt30 pb20 header_content pr">
+    <div class="logo fl"><%=link_to("小小食杂铺", products_path, class: "col-red")%></div>
+    <div class="fl ml40 mt10">
+      <%= render :partial => "products/search_bar" %>
+    </div>
+    <div class="pa mt10 cart-wrap">
+      <%= render :partial => "products/cart" %>
+    </div>
+  </div>
+</div>
+<%= render :partial => "products/menu" %>
+<div class="minHeight1000 bg-gray">
+  <div class="banner tc pt30 w1200 bc">
+    <div id="myCarousel" class="carousel slide">
+      <ol class="carousel-indicators">
+        <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+        <li data-target="#myCarousel" data-slide-to="1"></li>
+        <li data-target="#myCarousel" data-slide-to="2"></li>
+     </ol>
+     <div class="carousel-inner">
+        <div class="item active">
+         <a href="javacript:;">
+          <img src="https://ww2.sinaimg.cn/large/006tNc79ly1fcrl5afeqhj30xc0afgpx.jpg">
+          <div class="carousel-caption"></div>
+         </a>
+        </div>
+        <div class="item">
+         <a href="javacript:;">
+          <img src="https://vipweb.bs2cdn.yy.com/vipinter_de4f123bb220482e93649571a1491572.jpg">
+          <div class="carousel-caption"></div>
+         </a>
+        </div>
+        <div class="item">
+         <a href="javacript:;">
+          <img src="https://ww2.sinaimg.cn/large/006tNc79ly1fcrlcb0knhj30xc0afwib.jpg">
+          <div class="carousel-caption"></div>
+         </a>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="order clearfix mt30 w1200 bc">
+    <p class="fl title pl20 pr20">商品排序：</p>
+    <ul class="fl orderList">
+      <li class="fl orderList-orderItem pl20 pr20 <%= 'orderList-activeItem' if !params[:order] %>"><%= link_to("新品", products_path) %></li>
+      <li class="fl orderList-orderItem pl20 pr20 <%= 'orderList-activeItem' if params[:order] == 'by_product_quantity' %>"><%= link_to("销量", products_path(:order => "by_product_quantity")) %></li>
+      <li class="fl orderList-orderItem pl20 pr20 <%= 'orderList-activeItem' if params[:order] == 'by_product_price' %>"><%= link_to("价格", products_path(:order => "by_product_price")) %></li>
+    </ul>
+  </div>
+
+  <div class="productList-wrap w1200 pt20 bc">
+    <%= render :partial => "products/product_list"%>
+  </div>
+</div>
+
+<div class="category_sidebar tc border f12">
+  <% Category.all.each do |category| %>
+    <%= link_to category.name, products_path(category: category.name) %>
+  <% end %>
+  <a class="backtop" href="javascript:;"><i class="fa fa-arrow-circle-up"></i></a>
+</div>
